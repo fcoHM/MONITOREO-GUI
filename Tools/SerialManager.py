@@ -42,7 +42,7 @@ class SerialManager(QObject):
             self.serialConexion = serial.Serial(
                 port=puerto,  # puerto seleccionado
                 baudrate=self.baudios,  # velocidad
-                timeout=1 # Timeout de lectura en segundos
+                timeout=0.5 # Timeout de lectura en segundos
             )
             return True  # si se establecio
         except serial.SerialException:
@@ -87,14 +87,14 @@ class SerialManager(QObject):
 
     # escanear puerto
     def _escanear_puerto(self):
-        buffer = ""  # Almacena datos incompletos entre lecturas
+        buffer = ""  # este se puede cambiar a un arreglo tipo bytes 
 
         while not self.scanning_event.is_set():  # Se ejecuta hasta activar evento de parada
             try:
                 # verifica si hay datos disponibles
                 if self.serialConexion and self.serialConexion.in_waiting > 0:
                     # lee y decodifica los datos disponibles
-                    data = self.serialConexion.read(
+                    data = self.serialConexion.read( # aqui se puede mandar en crudo y trabajar con bytes
                         self.serialConexion.in_waiting).decode('utf-8', errors='ignore')
                     buffer += data
 

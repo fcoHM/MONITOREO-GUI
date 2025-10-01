@@ -39,5 +39,8 @@ env\Scripts\activate.bat
 python3 -m venv env
 source env/bin/activate
 
-#Instalar dependencias
+# Instalar dependencias
 pip install PySide6 vtk pyserial pandas matplotlib numpy
+
+# Enpaquetado en .exe
+pyinstaller --onefile --windowed --name "MONITOREO_GUI" --icon="Media/icono.ico" --exclude-module PyQt6 --exclude-module PyQt5 --add-data "View/Styles;View/Styles" --add-data "Media/Model3D;Media/Model3D" --add-data "View/Components/Mapas;View/Components/Mapas" --hidden-import "PySide6.QtLocation" --hidden-import "PySide6.QtPositioning" main.py 

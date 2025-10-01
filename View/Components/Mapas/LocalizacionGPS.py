@@ -48,7 +48,7 @@ class LocalizacionGPS(QWidget):
         contenido.addLayout(self.controlLayout) # se agrega el panel de control al contenido
 
     def cambiarCordenadas(self, lon, lat):
-        self.etiCordenadas.setText(f"Lon: {lon}, Lat: {lat}")
+        self.etiCordenadas.setText(f"Lat: {lat}, Lon: {lon}")
         self.gps.actualizarCordenadas(lat, lon)
 
     

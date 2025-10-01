@@ -69,6 +69,7 @@ class GraficaMaximo(QWidget):
 
     # agregar un dato nuevo a la grafica 
     def agregarDato(self, dato):
+        dato = int(dato)
         self.contador_segundos += 1 # agregamos 1
 
         self.datos_ventana.append(dato)# se agrega el nuevo dato
@@ -79,7 +80,11 @@ class GraficaMaximo(QWidget):
             if maximo_actual > self.maximo:
                 self.maximo = maximo_actual
         
-        
+         # Validar la cantidad de datos en la ventana de la gráfica
+        if len(self.tiempos_ventana) > 50:
+            self.tiempos_ventana.pop(0)
+            self.datos_ventana.pop(0)
+
         self.actualizarGrafica()
         self.info.setText(f"📡 Último dato: {dato} {self.notacion}")
         self.infoMaximo.setText(f"Maximo: {self.maximo} {self.notacion}")

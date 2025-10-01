@@ -56,6 +56,7 @@ class GraficaGenerica(QWidget):
 
     # Método para agregar un dato a la gráfica
     def agregarDato(self, dato):
+        dato = round(dato, 1)
         self.contador_segundos += 1
 
         # Agregar los datos a las listas temporales

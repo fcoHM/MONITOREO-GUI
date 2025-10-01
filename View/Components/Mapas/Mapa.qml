@@ -10,6 +10,7 @@ Item {
     Plugin {
         id: mapPlugin
         name: "osm" // "osm" se refiere a OpenStreetMap.
+        PluginParameter { name: "osm.mapping.host"; value: "https://tile.openstreetmap.org/%z/%x/%y.png" }
     }
 
     // --- El componente del Mapa ---

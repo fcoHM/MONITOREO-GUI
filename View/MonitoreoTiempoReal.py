@@ -194,6 +194,8 @@ class MonitoreoTiempoReal(QWidget):
     
     def obtener_nombre(self):
         return self.nameMision.text() # se retorna un texto que sera el nombre del vuelo
+    def obtener_modelo(self):
+        return self.tipoMision.currentText() # obetenemos el modelo 3D
     
     # mostrar mensaje en pantalla
     def mostrar_mensaje(self, titulo, mensaje, tipo="info"):
