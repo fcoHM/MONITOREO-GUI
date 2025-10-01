@@ -1,28 +1,31 @@
-# 🚀 Interfaz Gráfica para CANSAT
+# 🚀 Interfaz de Monitoreo para Cohetes y Satélites
 
-Este proyecto es una interfaz gráfica desarrollada con **PySide6**, diseñada para visualizar en tiempo real los datos transmitidos por un satélite tipo **CANSAT**.
+Este proyecto es una interfaz gráfica desarrollada con **PySide6**, diseñada para visualizar en tiempo real los datos transmitidos por sistemas de **cohetería experimental** y satélites tipo **CANSAT**.  
 
-Se enfoca en representar parámetros como:
+Su propósito es representar de manera clara la información recibida durante el vuelo o en fase de pruebas, ya sea proveniente de un **cohete** o de un **satélite**, dependiendo de lo que se esté monitoreando en ese momento.  
 
-- 🌡️ **Temperatura**
-- 📈 **Presión**
-- 🛰️ **Altura**
+Entre los parámetros que se pueden visualizar se incluyen:  
 
-Proporcionando una herramienta clara y eficiente para el monitoreo durante el vuelo y la fase de pruebas.
+- 🌡️ **Temperatura**  
+- 📈 **Presión**  
+- 🛰️ **Altura**  
+- 📡 **Telemetría general del vuelo**  
+
+De esta forma, la herramienta se convierte en un apoyo esencial para la interpretación y análisis de datos en proyectos aeroespaciales estudiantiles.  
 
 ---
 
 ## 🧩 Arquitectura del Proyecto
 
-El sistema está basado en el patrón de diseño **MVC (Modelo - Vista - Controlador)**, lo cual permite:
+El sistema está basado en el patrón de diseño **MVC (Modelo - Vista - Controlador)**, lo cual permite:  
 
-- 🧼 Separación clara de responsabilidades
-- 📦 Organización modular con clases orientadas a objetos
-- 🎨 Estilos visuales personalizables con hojas `.qss`
-- 🖼️ Vistas independientes por funcionalidad
-- 🔗 Fácil integración con otros sistemas
+- 🧼 Separación clara de responsabilidades  
+- 📦 Organización modular con clases orientadas a objetos  
+- 🎨 Estilos visuales personalizables con hojas `.qss`  
+- 🖼️ Vistas independientes por funcionalidad  
+- 🔗 Fácil integración con otros sistemas  
 
-Este enfoque ofrece una experiencia visual limpia, escalable y adaptable a las necesidades futuras del equipo.
+Este enfoque ofrece una experiencia visual limpia, escalable y adaptable a las necesidades futuras del equipo.  
 
 ---
 
