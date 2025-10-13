@@ -88,7 +88,7 @@ class CMonitoreoTiempoReal:
                 return
 
             datos = [float(valor.strip()) for valor in datos_str_list if valor.strip()] # datos de salida
-            
+            print(datos)
             self.actualizar_graficas(datos) # actualizar grafica, se manda a llamar aqui por que esta funcion esta enlazada con la senial de recepcion de cadenas
 
         except (ValueError, IndexError) as e:
@@ -119,6 +119,8 @@ class CMonitoreoTiempoReal:
                 # Datos del GPS
                 lat = datos[11]
                 lon = datos[12]
+                # Se envian los datos a la vista para ser actualizados
+                self.vista.actualizarInformacion(gx, gy, gz, tem, humedad, press, alt, calAire, lon, lat)
             elif len(datos) > 13: # cuando haya mas de los 13 datos, siguiendo el estandar
                 pass
             
@@ -126,8 +128,7 @@ class CMonitoreoTiempoReal:
             else:
                 print(f"Advertencia: Se recibieron datos incompletos")
 
-            # Se envian los datos a la vista para ser actualizados
-            self.vista.actualizarInformacion(gx, gy, gz, tem, humedad, press, alt, calAire, lon, lat)
+            
         
 
     def iniciar_monitoreo(self): # inicar el escaneo del puerto serial

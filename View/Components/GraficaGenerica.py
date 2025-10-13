@@ -11,7 +11,7 @@ class GraficaGenerica(QWidget):
         # Contadores para datos y tiempo
         self.tiempos_ventana = []      # Eje X: tiempo en segundos temporales
         self.datos_ventana = []        # Eje Y: datos temporales
-        self.datos_historial = []      # Eje Y: datos persistentes
+        
 
         self.contador_segundos = 0 # Segundos de la grafica
         self.nombre_grafica = nombre_grafica  # Nombre de la grafica
@@ -62,8 +62,6 @@ class GraficaGenerica(QWidget):
         # Agregar los datos a las listas temporales
         self.tiempos_ventana.append(self.contador_segundos)
         self.datos_ventana.append(dato)
-        # Agregar los datos a la lista persistente
-        self.datos_historial.append(dato)
 
         # Validar la cantidad de datos en la ventana de la gráfica
         if len(self.tiempos_ventana) > 15:
@@ -105,13 +103,8 @@ class GraficaGenerica(QWidget):
 
     #limpiar datos en ventana
     def limpiarVista(self):
-        self.datos_historial.clear()
         self.datos_ventana.clear()
         self.tiempos_ventana.clear()
         self.contador_segundos =0
         self.actualizarGrafica()
         self.info.setText("⏳ Esperando monitoreo...")
-
-    # Métodos get para las listas
-    def getDatos(self):
-        return self.datos_historial

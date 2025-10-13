@@ -133,7 +133,6 @@ class GraficaMaximo(QWidget):
 
     #limpiar datos en ventana
     def limpiarVista(self):
-        self.datos_historial.clear()
         self.datos_ventana.clear()
         self.tiempos_ventana.clear()
         self.actualizarGrafica()
