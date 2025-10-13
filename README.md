@@ -29,6 +29,19 @@ Este enfoque ofrece una experiencia visual limpia, escalable y adaptable a las n
 
 ---
 
+---
+
+## 📚 Librerías y Versiones
+
+Este proyecto depende de las siguientes librerías principales. Las versiones listadas son las que se han utilizado durante el desarrollo y se ha verificado su compatibilidad.
+
+- **PySide6**: `6.9.1`
+- **matplotlib**: `3.10.3`
+- **pyserial**: `3.5`
+- **vtk**: `9.5.0`
+
+---
+
 ## ⚙️ Configuración del Entorno Virtual
 
 ### 1️⃣ Crear el entorno virtual
@@ -41,9 +54,22 @@ env\Scripts\activate.bat
 # En Linux o MacOS
 python3 -m venv env
 source env/bin/activate
+```
 
-# Instalar dependencias
+### 2️⃣ Instalar Dependencias
+
+Para instalar todas las dependencias necesarias, ejecuta el siguiente comando después de activar tu entorno virtual:
+
+```bash
 pip install PySide6 vtk pyserial pandas matplotlib numpy
+```
 
-# Enpaquetado en .exe
-pyinstaller --onefile --windowed --name "MONITOREO_GUI" --icon="Media/icono.ico" --exclude-module PyQt6 --exclude-module PyQt5 --add-data "View/Styles;View/Styles" --add-data "Media/Model3D;Media/Model3D" --add-data "View/Components/Mapas;View/Components/Mapas" --hidden-import "PySide6.QtLocation" --hidden-import "PySide6.QtPositioning" main.py 
+---
+
+## 📦 Empaquetado
+
+Para generar un archivo ejecutable `.exe` del proyecto, puedes usar `pyinstaller` con la siguiente configuración:
+
+```bash
+pyinstaller --onefile --windowed --name "MONITOREO_GUI" --icon="Media/icono.ico" --exclude-module PyQt6 --exclude-module PyQt5 --add-data "View/Styles;View/Styles" --add-data "Media/Model3D;Media/Model3D" --add-data "View/Components/Mapas;View/Components/Mapas" --hidden-import "PySide6.QtLocation" --hidden-import "PySide6.QtPositioning" main.py
+```
