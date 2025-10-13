@@ -29,8 +29,6 @@ Este enfoque ofrece una experiencia visual limpia, escalable y adaptable a las n
 
 ---
 
----
-
 ## 📚 Librerías y Versiones
 
 Este proyecto depende de las siguientes librerías principales. Las versiones listadas son las que se han utilizado durante el desarrollo y se ha verificado su compatibilidad.
