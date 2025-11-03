@@ -14,6 +14,10 @@ Item {
             name: "osm.mapping.providersrepository.disabled"
             value: "true" // Deshabilita los proveedores por defecto
         }
+        PluginParameter {
+            name: "osm.mapping.offline.directory"
+            value: "C:/CANSAT-GUI/Media/OfflineMapTiles"
+        }
         PluginParameter { 
             name: "osm.mapping.custom.host"
             value: "https://tile.openstreetmap.org/" 
@@ -28,8 +32,9 @@ Item {
         }
         PluginParameter { 
             name: "osm.mapping.cache.directory"
-            value: ".cache" 
+            value: "C:/CANSAT-GUI/Media/OfflineMapTiles" 
         }
+        
     }
 
     Map {
@@ -48,9 +53,9 @@ Item {
 
             sourceItem: Image {
                 id: icon
-                source: "https://cdn-icons-png.flaticon.com/512/684/684908.png"
-                width: 32
-                height: 32
+                source: iconPath // Use the iconPath from the QML context
+                width: 28
+                height: 28
             }
         }
 

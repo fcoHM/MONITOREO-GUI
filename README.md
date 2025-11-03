@@ -69,5 +69,5 @@ pip install PySide6 vtk pyserial pandas matplotlib numpy
 Para generar un archivo ejecutable `.exe` del proyecto, puedes usar `pyinstaller` con la siguiente configuración:
 
 ```bash
-pyinstaller --onefile --windowed --name "MONITOREO_GUI" --icon="Media/icono.ico" --exclude-module PyQt6 --exclude-module PyQt5 --add-data "View/Styles;View/Styles" --add-data "Media/Model3D;Media/Model3D" --add-data "View/Components/Mapas;View/Components/Mapas" --hidden-import "PySide6.QtLocation" --hidden-import "PySide6.QtPositioning" main.py
+pyinstaller --onefile --windowed --name "MONITOREO_GUI" --icon="Media/icono.ico" --exclude-module PyQt6 --exclude-module PyQt5 --add-data "View/Styles;View/Styles" --add-data "Media/Model3D;Media/Model3D" --add-data "View/Components/Mapas;View/Components/Mapas" --add-data "Media/marcador_ubi.ico;Media" --hidden-import "PySide6.QtLocation" --hidden-import "PySide6.QtPositioning" main.py
 ```

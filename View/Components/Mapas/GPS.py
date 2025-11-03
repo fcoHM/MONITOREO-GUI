@@ -24,7 +24,7 @@ class GPS(QObject):
                 self.coordenadas_actualizadas.emit(lat, lon)
 
     def masZoom(self): # hacer zoom al mapa
-        if self.zoom < 20: # ver que el ql zoom este bajo el rango maximo
+        if self.zoom < 18: # ver que el ql zoom este bajo el rango maximo
             self.zoom +=2
             print(self.zoom)
             self.signalZoom.emit(self.zoom) # emitir la senial

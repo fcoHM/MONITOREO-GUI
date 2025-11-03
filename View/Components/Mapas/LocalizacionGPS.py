@@ -23,6 +23,10 @@ class LocalizacionGPS(QWidget):
         self.gps = GPS()
         self.mapa.rootContext().setContextProperty("gps", self.gps)
 
+        # Exponemos la ruta absoluta del icono a QML
+        rutaIcono = rutaAbsoluta("Media/marcador_ubi.ico")
+        self.mapa.rootContext().setContextProperty("iconPath", QUrl.fromLocalFile(rutaIcono))
+
         # Le damos el mapa al contexto de la vista rapida
         rutaMapa = rutaAbsoluta("View/Components/Mapas/Mapa.qml")
         qml_url = QUrl.fromLocalFile(rutaMapa)
