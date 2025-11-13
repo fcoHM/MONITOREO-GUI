@@ -79,10 +79,11 @@ class Visual3D(QWidget):
         self.renderer.ResetCameraClippingRange()
         self.vtk_widget.GetRenderWindow().Render()
 
-    def actualizarOrientacion(self, x: float, y: float, z: float): # Actualiza la orientación del modelo 3D y muestra los valores en la etiqueta. guarda el historial de rotaciones.
+    def actualizarOrientacion(self, x: int, y: int, z: int): # Actualiza la orientación del modelo 3D y muestra los valores en la etiqueta. guarda el historial de rotaciones.
         if self.actor:
             if self.actor.GetOrientation() != (x, y, z): # Compara la orientacion con la anteror de que no sea igual
                 self.actor.SetOrientation(x, y, z)
+                self.renderer.ResetCameraClippingRange()
                 self.vtk_widget.GetRenderWindow().Render()
         self.infoModel.setText(f"X: {x}  Y: {y}  Z: {z}   ")
         self.x_hist.append(x)

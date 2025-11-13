@@ -117,7 +117,7 @@ class MonitoreoTiempoReal(QWidget):
         self.altura = GraficaMaximo("Altura", "Tiempo (s)", "Altura (m)", "m", "#FFFF33")
 
         self.humedad = GraficaGenerica("Humedad", "Tiempo (s)", "Humedad (%)", "%", "#33A7FF")
-        self.presion = GraficaGenerica("Presión", "Tiempo (s)", "Presión (Pa)", "Pa", "#33FF57")
+        self.presion = GraficaGenerica("Presión", "Tiempo (s)", "Presión (hPa)", "hPa", "#33FF57")
         
         self.calAire = GraficaGenerica("Calidad Aire", "Tiempo (s)", "Concentración (ppm)", "ppm", "#FFFFFF")
 
@@ -219,7 +219,8 @@ class MonitoreoTiempoReal(QWidget):
             self.visual.setZoomFijo(2000)
 
     # agregar nueva informacion
-    def actualizarInformacion(self,gx,gy,gz,tem, hum,press, cal, alt, lon, lat):
+    #gx, gy, gz, tem, humedad, press, alt, calAire, lon, lat
+    def actualizarInformacion(self,gx,gy,gz,tem, hum,press, alt, cal, lon, lat):
         self.visual.actualizarOrientacion(gx,gy,gz)
         self.temperatura.agregarDato(tem)
         self.humedad.agregarDato(hum)

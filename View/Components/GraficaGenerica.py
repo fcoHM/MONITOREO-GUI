@@ -6,7 +6,7 @@ from matplotlib.figure import Figure
 class GraficaGenerica(QWidget):
     def __init__(self, nombre_grafica, nomX, nomY, notacion, color):
         super().__init__()
-        self.setMinimumSize(500, 390)  # Tamaño inicial de la ventana QT
+        self.setMinimumSize(480, 390)  # Tamaño inicial de la ventana QT
         
         # Contadores para datos y tiempo
         self.tiempos_ventana = []      # Eje X: tiempo en segundos temporales

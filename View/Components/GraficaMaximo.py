@@ -5,7 +5,7 @@ from matplotlib.figure import Figure
 class GraficaMaximo(QWidget):
     def __init__(self, nombre_grafica, nomX, nomY, notacion, color):
         super().__init__() # se manda a llamar a la clase padre para la constricion de la ventana/componente
-        self.setMinimumSize(500, 390)  # Tamaño inicial de la ventana QT
+        self.setMinimumSize(480, 370)  # Tamaño inicial de la ventana QT
 
         # atributos del compente
         self.contador_segundos = 0 # Segundos de la grafica

@@ -117,8 +117,8 @@ class CMonitoreoTiempoReal:
                 calAire = datos[10]
                 
                 # Datos del GPS
-                lat = datos[11]
-                lon = datos[12]
+                lon = datos[11]
+                lat = datos[12]
                 # Se envian los datos a la vista para ser actualizados
                 self.vista.actualizarInformacion(gx, gy, gz, tem, humedad, press, alt, calAire, lon, lat)
             elif len(datos) > 13: # cuando haya mas de los 13 datos, siguiendo el estandar
