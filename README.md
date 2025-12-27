@@ -11,7 +11,8 @@ Entre los parámetros que se pueden visualizar se incluyen:
 - 🛰️ **Altura**  
 - 📡 **Telemetría general del vuelo**  
 
-De esta forma, la herramienta se convierte en un apoyo esencial para la interpretación y análisis de datos en proyectos aeroespaciales estudiantiles.  
+De esta forma, la herramienta se convierte en un apoyo esencial para la interpretación y análisis de datos en proyectos aeroespaciales estudiantiles.
+[🎥 Ver video del System Monitoring](Media/imagenes/SystemMonitoring.mp4)
 
 ---
 
