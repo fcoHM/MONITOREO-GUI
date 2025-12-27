@@ -13,7 +13,7 @@ Entre los parámetros que se pueden visualizar se incluyen:
 
 De esta forma, la herramienta se convierte en un apoyo esencial para la interpretación y análisis de datos en proyectos aeroespaciales estudiantiles.
 
-![🎥 Ver video del System Monitoring](Media/imagenes/SystemMonitoring.gif)
+![GUI-MONITORING](Media/imagenes/SystemMonitoring.gif)
 
 ---
 
